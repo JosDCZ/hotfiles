@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# brightness_step
+iDIR='/usr/share/icons/Papirus-Dark/48x48/status'
+icon="$iDIR"/notification-display-brightness-full.svg
+
+if [ "$1" == "--dec" ]; then
+	STEP="$brightness_step" && light -U ${STEP:-5} &&command -v notify-send >/dev/null && VALUE=$(light) && VALUE=${VALUE%%.*} && notify-send -e -h string:x-canonical-private-synchronous:brightness -h "int:value:$VALUE" -t 800 "Brightness: ${VALUE}%" -i "$icon"
+elif [ "$1" == "--inc" ]; then
+	STEP="$brightness_step" && light -A ${STEP:-5} &&command -v notify-send >/dev/null && VALUE=$(light) && VALUE=${VALUE%%.*} && notify-send -e -h string:x-canonical-private-synchronous:brightness -h "int:value:$VALUE" -t 800 "Brightness: ${VALUE}%" -i "$icon"
+else
+	VALUE=$(light) && VALUE=${VALUE%%.*} && notify-send -e -h string:x-canonical-private-synchronous:brightness -h "int:value:$VALUE" -t 800 "Brightness: ${VALUE}%" -i "$icon"
+fi

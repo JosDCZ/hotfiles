@@ -1,0 +1,217 @@
+##---------- Keybindings for bspwm ----------##
+
+# Terminal (alacritty)
+super + Return
+	bspterm
+
+# Terminal (floating)
+super + alt + Return
+	bspterm --float
+
+# Terminal (fullscreen)
+super + ctrl + Return
+	bspterm --full
+
+# Terminal (now)
+super + shift + Return
+	bspterm --now
+
+##---------- Rofi Launcher & Menus ----------##
+
+# Rofi App Launcher
+super + d
+	~/.config/rofi/launchers/type-2/launcher.sh &
+
+# Rofi power
+super + x
+	 ~/.config/rofi/applets/bin/powermenu.sh &
+
+# Rofi Menus/Applets
+super + {r,a,y,z,m,s,w}
+	~/.config/rofi/applets/bin/{appasroot,apps,battery,brightness,mpd,screenshot,volume}.sh
+
+# Red
+super + n
+	networkmanager_dmenu
+
+# Portapapeles
+super + e
+	CM_LAUNCHER=rofi clipmenu -theme /home/josue/.config/rofi/applets/shared/clipmenu.rasi -p 'Portapapeles' &
+
+super + b
+	rofi-bluetooth -theme /home/josue/.config/rofi/applets/shared/clipmenu.rasi -p 'Bluetooth'
+	
+##---------- Applications ----------##
+
+# Launch Apps
+super + shift + {f,w,e,p,c,t,m}
+	{nemo,google-chrome-stable,kitty --class 'kitty-float' --config ~/.config/kitty/kittyfloat.conf -e calcurse,gpick,qalculate-gtk,thunderbird,kitty --class 'kitty-float' --config ~/.config/kitty/kittymusic.conf -e ncmpcpp-ueberzug}
+
+# Terminal Apps
+ctrl + alt + {v,h}
+	kitty -e {vim,btop}
+
+# Color Picker
+super + o
+	bspcolorpicker
+	
+
+# Lockscreen
+ctrl + super + l
+#    betterlockscreen --lock
+	~/.config/lock.sh 
+
+##---------- System Keys ----------##
+
+# Take a screenshot
+Print
+	bspscreenshot --now
+	
+# Take screenshot in 5 second
+alt + Print	
+	bspscreenshot --in5
+
+# Take screenshot in 10 second
+shift + Print	
+	bspscreenshot --in10
+
+# Take screenshot of active window
+ctrl + Print
+	bspscreenshot --win
+
+# Take screenshot of area
+super + Print
+	bspscreenshot --area
+
+# Brighness control
+XF86MonBrightness{Up,Down}
+	brightness-helper{ --inc, --dec}
+	#light {-A,-U} 5
+	
+# Speaker Volume control
+XF86Audio{RaiseVolume,LowerVolume}
+	volume-helper --limit {"$volume_limit" --increase "$volume_step","$volume_limit" --decrease "$volume_step"}
+	#bspvolume{ --inc, --dec}
+	#amixer -D pulse sset Master {5%+, 5%-}
+
+# Mic Volume control
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle && volume-helper
+	#bspvolume --toggle
+	#pulsemixer --toggle-mute
+	
+# Music control
+ctrl + XF86Audio{Next,Prev,Play,Stop}
+	mpc {next,prev,toggle,stop}
+
+# Playerctl
+XF86Audio{Next,Prev,Play,Stop}
+	playerctl --all-players {next,previous,play-pause,stop}
+
+##---------- Bspwm ----------##
+
+# Hide/Unhide Window
+super + shift + h
+	bspwinmask
+
+# Close App
+super + {_,shift + }c
+	bspc node -{c,k}
+
+# kill window
+ctrl + alt + Escape
+    xkill
+
+# Quit/Restart bspwm
+ctrl + shift + {q,r}
+	bspc {quit,wm -r}
+	
+# Reload Keybindings
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Switch workspace
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Switch workspace or Send focused Node to another workspace
+super + {_,shift + }{1-8}
+	bspc {desktop -f,node -d} '^{1-8}' '--follow'
+
+# Send focused Node to workspace directionally
+super + ctrl + shift + {Left,Right}
+	bspc node -d {prev,next} '--follow'
+
+# Change focus of the Node or Swap Nodes
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Move floating windows
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Expanding windows
+super + control + {Left,Right,Up,Down}
+	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
+	
+# Shrinking windows
+super + alt + {Left,Right,Up,Down}
+	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+
+# Split horizontal, vertical or cancel
+super + {h,v,q}
+	bspc node -p {east,south,cancel}
+
+# Preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Toggle Layout (Tiled/Monocle)
+super + l
+	bspc desktop -l next
+
+# Toggle Fullscreen
+super + f
+    bspc node -t "~"fullscreen
+
+# Toggle beetwen floating & tiled
+super + space
+    bspc node -t "~"{floating,tiled}
+
+# Pseudo Tiled & tiled mode
+super + shift + space
+    bspc node -t "~"{pseudo_tiled,tiled}
+
+# Set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# Change focus to next window, including floating window
+alt + {_,shift + }Tab
+	bspc node -f {next.local,prev.local}
+
+# Switch to last opened workspace
+super + {Tab,grave}
+	bspc {node,desktop} -f last
+
+# Toggle between rgrid and tiled layouts
+super + i
+	bsp-layout set tall -- --master-size 0.4
+
+super + j
+	bsp-layout set wide
+
+super + k
+	bsp-layout remove
+
+# Change size tiled
+super + equal
+	bspc config window_gap $(($(bspc config window_gap) + 5))
+
+super + minus
+	bspc config window_gap $(($(bspc config window_gap) - 5))
+
+super + 0
+	bspc config window_gap 10
+	
+##---------- EOF ----------##

@@ -1,0 +1,38 @@
+{
+    "output": "eDP-1",
+    "layer": "top",
+    "margin-top": 10,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,    
+    "spacing": 0,
+
+    "include": ["~/.config/waybar/modules.json"],
+
+    "modules-left": [
+        "custom/appmenu",
+        "wlr/taskbar",
+        "bluetooth",
+        "custom/updates",
+        "group/quicklinks",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "tray",
+        "backlight",
+        "battery", 
+        "pulseaudio",
+        "hyprland/language",
+        "group/hardware",
+        "keyboard-state",
+        "idle_inhibitor",
+        "custom/exit",
+        "network",
+        "clock"
+    ]
+}

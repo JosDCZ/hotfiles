@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+##
+## launch alacritty with bspwm config
+
+# bspwm directory
+
+if [ "$1" == "--float" ]; then
+	kitty --class 'kitty-float' --config ~/.config/kitty/kittyfloat.conf
+elif [ "$1" == "--full" ]; then
+	kitty --class 'kitty-fullscreen' --start-as fullscreen -o font_size=14.0
+elif [ "$1" == "--now" ]; then
+	kitty --class 'kitty-now'
+else
+	kitty
+fi
