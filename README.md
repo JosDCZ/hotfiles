@@ -1,0 +1,2 @@
+# hotfiles
+Hyprland + BSPWM
