@@ -359,8 +359,18 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #tray {
-  margin: 0px 10px 0px 0px;
+  background-color: #1e1e2e;
   color: #cdd6f4;
+  padding: 2px 7px 2px 7px;
+  margin: 0px 10px 0px 0px;
+  border-radius: 15px;
+  border: 2px solid #cba6f7;
+}
+
+#tray menu * {
+  font-family: "Noto Sans";
+  font-weight: normal;
+  font-size: 12px;
 }
 
 #tray > .passive {

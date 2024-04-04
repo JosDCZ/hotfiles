@@ -6,33 +6,18 @@ set encoding=utf-8
 set showmatch
 set clipboard+=unnamed,unnamedplus
 
-if !empty($WAYLAND_DISPLAY)
-    let g:clipboard = {
-        \ 'name': 'wayland',
-        \ 'copy': {
-        \     '+': ['wl-copy', '--trim-newline'],
-        \     '*': ['wl-copy', '--trim-newline'],
-        \ },
-        \ 'paste': {
-        \     '+': ['wl-paste', '--no-newline'],
-        \     '*': ['wl-paste', '--no-newline'],
-        \ },
-        \ 'cache_enabled': 1
-        \ }
-else
-    let g:clipboard = {
-        \ 'name': 'xsel',
-        \ 'copy': {
-        \     '+': 'xsel -ib',
-        \     '*': 'xsel -ib'
-        \ },
-        \ 'paste': {
-        \     '+': 'xsel -ob',
-        \     '*': 'xsel -ob'
-        \ },
-        \ 'cache_enabled': 1
-        \ }
-endif
+let g:clipboard = {
+    \ 'name': 'wayland',
+    \ 'copy': {
+    \     '+': ['wl-copy', '--trim-newline'],
+    \     '*': ['wl-copy', '--trim-newline'],
+    \ },
+    \ 'paste': {
+    \     '+': ['wl-paste', '--no-newline'],
+    \     '*': ['wl-paste', '--no-newline'],
+    \ },
+    \ 'cache_enabled': 1
+    \ }
 
 call plug#begin('~/.vim/plugged')
 

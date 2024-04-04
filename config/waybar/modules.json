@@ -95,8 +95,8 @@
     }
   },
   "tray": {
-    "icon-size": 22,
-    "spacing": 10
+    "icon-size": 20,
+    "spacing": 5
   },
   "clock": {
     "timezone": "America/El_Salvador",
