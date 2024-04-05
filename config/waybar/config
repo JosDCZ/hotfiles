@@ -23,13 +23,13 @@
     ],
 
     "modules-right": [
+        "keyboard-state",
+        "idle_inhibitor",
+        "group/hardware",
+        "custom/exit",
         "backlight",
         "battery", 
         "pulseaudio",
-        "group/hardware",
-        "keyboard-state",
-        "idle_inhibitor",
-        "custom/exit",
         "tray",
         "clock"
     ]
