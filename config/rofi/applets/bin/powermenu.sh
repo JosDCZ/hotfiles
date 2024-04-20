@@ -90,13 +90,7 @@ confirm_run () {
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		if [[ $WAYLAND_DISPLAY ]]; then
-			sleep 0.5
-			swaylock -f -c 000000
-		else
-			sleep 0.4
-			~/.config/lock.sh 
-		fi
+		hyprlock
 	elif [[ "$1" == '--opt2' ]]; then
 		confirm_run 'kill -9 -1'
 	elif [[ "$1" == '--opt3' ]]; then

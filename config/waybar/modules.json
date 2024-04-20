@@ -5,7 +5,7 @@
     "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
-      "1": "",
+      "1": "",
       "2": "",
       "3": "",
       "4": "",
@@ -32,14 +32,7 @@
       "asciiquarium -t",
       "ueberzugpp_90qdi2zvqi",
       "unimatrix -c blue -s 95"
-    ],
-    "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
-    },
-    "rewrite": {
-      "Firefox Web Browser": "Firefox",
-      "Foot Server": "Terminal"
-    }
+    ]
   },
   "hyprland/window": {
     "format": "{title}",
@@ -51,28 +44,39 @@
   },
   "custom/cliphist": {
     "format": "",
-    "on-click-right": "cliphist list | rofi -dmenu -theme /home/josue/.config/rofi/applets/shared/clipmenu.rasi -p 'Portapapeles' | cliphist decode | wl-copy",
-    "on-click": "cliphist list | rofi -dmenu -theme /home/josue/.config/rofi/applets/shared/clipmenu.rasi -p 'Portapapeles' | cliphist decode | wl-copy",
+    "on-click-right": "cliphist list | rofi -dmenu -theme ~/.config/rofi/applets/shared/clipmenu.rasi -p 'Portapapeles' | cliphist decode | wl-copy",
+    "on-click": "cliphist list | rofi -dmenu -theme ~/.config/rofi/applets/shared/clipmenu.rasi -p 'Portapapeles' | cliphist decode | wl-copy",
     "tooltip": false
   },
   "custom/updates": {
-    "format": " {}",
-    "tooltip-format": "{}",
-    "escape": true,
+    "format": "{icon} {}",
     "return-type": "json",
-    "exec": "~/.config/waybar/scripts/updates.sh",
-    "restart-interval": 60,
-    "on-click": "kitty -e yay -Syu",
-    "tooltip": false
+    "format-icons": {
+      "has-updates": "",
+      "updated": ""
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300",
+    "on-click": "kitty -e yay -Syyu"
   },
   "custom/filemanager": {
-    "format": "",
-    "on-click": "nemo",
+    "format": "",
+    "on-click": "nautilus",
     "tooltip": false
   },
   "custom/browser": {
     "format": "",
     "on-click": "google-chrome-stable",
+    "tooltip": false
+  },
+  "custom/terminal": {
+    "format": "",
+    "on-click": "kitty",
+    "tooltip": false
+  },
+  "custom/musica": {
+    "format": "",
+    "on-click": "youtube-music",
     "tooltip": false
   },
   "custom/appmenu": {
@@ -95,7 +99,7 @@
     }
   },
   "tray": {
-    "icon-size": 22,
+    "icon-size": 20,
     "spacing": 3
   },
   "clock": {
@@ -151,11 +155,20 @@
       "children-class": "not-memory",
       "transition-left-to-right": false
     },
-    "modules": ["custom/system", "disk", "cpu", "memory"]
+    "modules": [
+      "custom/system",
+      "disk",
+      "cpu",
+      "memory"
+    ]
   },
   "group/quicklinks": {
     "orientation": "horizontal",
-    "modules": ["custom/filemanager", "custom/browser"]
+    "modules": [
+      "custom/filemanager",
+      "custom/musica",
+      "custom/browser"
+    ]
   },
   "network": {
     "format": "{ifname}",
@@ -184,7 +197,13 @@
     "format-plugged": " {capacity}%",
     "format-alt": "{icon} {time}",
     "format-full": " Full",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "max-length": 25
   },
   "pulseaudio": {
@@ -201,7 +220,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
     "on-click-right": "pavucontrol",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle && volume-helper"
@@ -231,11 +254,42 @@
       "activated": "",
       "deactivated": ""
     },
-    "on-click-right": "swaylock"
+    "on-click-right": "hyprlock"
   },
   "backlight": {
     "device": "amdgpu_bl1",
     "format": "{icon} {percent}%",
-    "format-icons": ["", "", ""]
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --ampm",
+    "return-type": "json"
+  },
+  "custom/notification": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='#f9e2af'></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='#94e2d5'></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='#f9e2af'></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='#94e2d5'></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   }
 }

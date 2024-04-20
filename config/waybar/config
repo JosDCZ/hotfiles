@@ -12,9 +12,9 @@
     "modules-left": [
         "custom/appmenu",
         "wlr/taskbar",
+        "group/quicklinks",
         "hyprland/language",
         "custom/updates",
-        "group/quicklinks",
         "hyprland/window"
     ],
 
@@ -23,13 +23,15 @@
     ],
 
     "modules-right": [
-        "keyboard-state",
-        "idle_inhibitor",
-        "group/hardware",
-        "custom/exit",
+        "custom/weather",
         "backlight",
         "battery", 
         "pulseaudio",
+        "group/hardware",
+        "idle_inhibitor",
+        "keyboard-state",
+        "custom/notification",
+        "custom/exit",
         "tray",
         "clock"
     ]

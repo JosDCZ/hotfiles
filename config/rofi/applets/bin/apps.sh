@@ -23,11 +23,11 @@ fi
 
 # CMDs (add your apps here)
 term_cmd='kitty'
-file_cmd='nemo'
-text_cmd='geany'
+file_cmd='nautilus'
+text_cmd='gedit'
 web_cmd='google-chrome-stable'
-music_cmd='kitty --class 'kitty-float' --config /home/josue/.config/kitty/kittymusic.conf -e ncmpcpp-ueberzug'
-setting_cmd='xfce4-power-manager-settings'
+music_cmd='youtube-music'
+setting_cmd='lxappearance'
 
 # Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`

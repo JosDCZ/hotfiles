@@ -3,7 +3,7 @@
  * ----------------------------------------------------- */
 
 * {
-  font-family: "JetBrainsMono", FontAwesome6Free, SymbolsNerdFont;
+  font-family: "JetBrains Mono", FontAwesome6Free, SymbolsNerdFont;
   border: none;
   font-weight: bold;
   font-style: normal;
@@ -61,15 +61,20 @@ window#waybar {
  * ----------------------------------------------------- */
 
 tooltip {
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: #1e1e2e;
-  border: 2px solid #45475a;
+  border: 2px solid #585b70;
+}
+
+tooltip * {
+  border-radius: 8px;
 }
 
 tooltip label {
   color: #cdd6f4;
   padding: 5px;
 }
+
 
 /* -----------------------------------------------------
  * Window
@@ -81,7 +86,7 @@ tooltip label {
   margin: 0px 0px 0px 0px;
   border-radius: 15px;
   color: #cdd6f4;
-  border: 2px solid #45475a;
+  border: 2px solid #585b70;
 }
 
 window#waybar.empty #window {
@@ -123,8 +128,11 @@ window#waybar.empty #window {
  * Custom Quicklinks
  * ----------------------------------------------------- */
 
+#custom-notification,
 #keyboard-state,
 #custom-browser,
+#custom-musica,
+#custom-terminal,
 #custom-filemanager,
 #custom-windowsvm,
 #custom-cliphist,
@@ -133,16 +141,24 @@ window#waybar.empty #window {
   margin-right: 15px;
 }
 
+#custom-notification,
 #idle_inhibitor,
 #custom-exit,
-#custom-browser,
+#custom-terminal,
+#custom-musica,
 #custom-filemanager,
 #custom-windowsvm,
 #custom-cliphist,
-#custom-system,
-#custom-browser {
+#custom-system {
   padding: 0px;
   font-size: 18px;
+  color: #cdd6f4;
+  font-weight: bold;
+}
+
+#custom-browser {
+  padding: 0px;
+  font-size: 20px;
   color: #cdd6f4;
   font-weight: bold;
 }
@@ -200,19 +216,43 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-  background: linear-gradient(to right, #cba6f7, #94e2d5);
+  background: linear-gradient(120deg, #cba6f7, #94e2d5);
   color: #1e1e2e;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
+  border: 2px solid #1e1e2e;
 }
 
 #custom-updates.yellow {
-  background: linear-gradient(to right, #cba6f7, #f9e2af);
+  background: linear-gradient(120deg, #cba6f7, #f9e2af);
 }
 
 #custom-updates.red {
-  background: linear-gradient(to right, #cba6f7, #eba0ac);
+  background: linear-gradient(120deg, #cba6f7, #eba0ac);
+}
+
+/* -----------------------------------------------------
+ * Custom Weather
+ * ----------------------------------------------------- */
+
+#custom-weather,
+#custom-weather.severe,
+#custom-weather.sunnyDay,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.default {
+  background: #1e1e2e;
+  padding: 0px 10px 0px 10px;
+  margin: 0px 10px 0px 0px;
+  border-radius: 15px;
+  color: #cdd6f4;
+  border: 2px solid #585b70;
 }
 
 /* -----------------------------------------------------
@@ -235,8 +275,9 @@ window#waybar.empty #window {
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  background: linear-gradient(to right, #89b4fa, #cba6f7);
+  background: linear-gradient(120deg, #89b4fa, #cba6f7);
   color: #1e1e2e;
+  border: 2px solid #1e1e2e;
 }
 
 /* -----------------------------------------------------
@@ -247,8 +288,9 @@ window#waybar.empty #window {
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  background: linear-gradient(to right, #89dceb, #f9e2af);
+  background: linear-gradient(120deg, #89dceb, #f9e2af);
   color: #1e1e2e;
+  border: 2px solid #1e1e2e;
 }
 
 /* -----------------------------------------------------
@@ -269,15 +311,16 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  background: linear-gradient(to right, #cba6f7, #f9e2af);
+  background: linear-gradient(120deg, #f9e2af, #cba6f7);
   color: #1e1e2e;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
+  border: 2px solid #1e1e2e;
 }
 
 #pulseaudio.muted {
-  background: linear-gradient(to right, #89b4fa, #f38ba8);
+  background: linear-gradient(120deg, #89b4fa, #f38ba8);
 }
 
 /* -----------------------------------------------------
@@ -310,15 +353,16 @@ window#waybar.empty #window {
 #bluetooth,
 #bluetooth.on,
 #bluetooth.connected {
-  background: linear-gradient(to right, #89b4fa, #a6e3a1);
+  background: linear-gradient(120deg, #89b4fa, #a6e3a1);
   color: #1e1e2e;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
+  border: 2px solid #1e1e2e;
 }
 
 #bluetooth.off {
-  background: linear-gradient(to right, #eba0ac, #89b4fa);
+  background: linear-gradient(120deg, #eba0ac, #89b4fa);
 }
 
 /* -----------------------------------------------------
@@ -326,16 +370,17 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #battery {
-  background: linear-gradient(to right, #f5c2e7, #85c1dc);
+  background: linear-gradient(120deg, #f5c2e7, #85c1dc);
   color: #1e1e2e;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
+  border: 2px solid #1e1e2e;
 }
 
 #battery.charging,
 #battery.plugged {
-  background: linear-gradient(to right, #89b4fa, #a6e3a1);
+  background: linear-gradient(120deg, #89b4fa, #a6e3a1);
 }
 
 @keyframes blink {
@@ -346,7 +391,7 @@ window#waybar.empty #window {
 }
 
 #battery.critical:not(.charging) {
-  background: linear-gradient(to right, #f5c2e7, #b4befe);
+  background: linear-gradient(120deg, #f5c2e7, #b4befe);
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
