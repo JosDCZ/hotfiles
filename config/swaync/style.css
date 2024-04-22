@@ -7,18 +7,18 @@
 }
 
 trough highlight {
-  background: #cdd6f4;
+  background: #4c4f69;
 }
 
 scale trough {
   margin: 0rem 1rem;
-  background-color: #313244;
+  background-color: #ccd0da;
   min-height: 8px;
   min-width: 70px;
 }
 
 slider {
-  background-color: #cba6f7;
+  background-color: #dd7878;
 }
 
 .image {
@@ -27,12 +27,12 @@ slider {
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  border: 2px solid #cba6f7;
+  border: 2px solid #dd7878;
   border-radius: 13px;
   margin-top: 20px;
   margin-right: 20px;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #eff1f5;
+  color: #4c4f69;
   padding: 0;
 }
 
@@ -48,7 +48,7 @@ slider {
   .notification-row
   .notification-background
   .notification.critical {
-  box-shadow: inset 0 0 7px 0 #f38ba8;
+  box-shadow: inset 0 0 7px 0 #d20f39;
 }
 
 .floating-notifications.background
@@ -66,7 +66,7 @@ slider {
   .notification
   .notification-content
   .summary {
-  color: #cdd6f4;
+  color: #4c4f69;
 }
 
 .floating-notifications.background
@@ -75,7 +75,7 @@ slider {
   .notification
   .notification-content
   .time {
-  color: #a6adc8;
+  color: #6c6f85;
 }
 
 .floating-notifications.background
@@ -84,7 +84,7 @@ slider {
   .notification
   .notification-content
   .body {
-  color: #cdd6f4;
+  color: #4c4f69;
 }
 
 .floating-notifications.background
@@ -104,10 +104,10 @@ slider {
   > *
   .notification-action {
   border-radius: 15px;
-  color: #cdd6f4;
+  color: #4c4f69;
   padding: 5px;
-  background-color: #11111b;
-  border: 2px solid #585b70;
+  background-color: #dce0e8;
+  border: 2px solid #acb0be;
   margin: 7px;
 }
 
@@ -118,9 +118,9 @@ slider {
   > *:last-child
   > *
   .notification-action:hover {
-  border: 2px solid #585b70;
-  background-color: #313244;
-  color: #cdd6f4;
+  border: 2px solid #acb0be;
+  background-color: #ccd0da;
+  color: #4c4f69;
 }
 
 .floating-notifications.background
@@ -130,9 +130,9 @@ slider {
   > *:last-child
   > *
   .notification-action:active {
-  border: 2px solid #585b70;
-  background-color: #cba6f7;
-  color: #1e1e2e;
+  border: 2px solid #acb0be;
+  background-color: #dd7878;
+  color: #eff1f5;
 }
 
 .floating-notifications.background
@@ -142,65 +142,65 @@ slider {
   margin: 7px;
   padding: 2px;
   border-radius: 13px;
-  color: #1e1e2e;
-  background-color: #f38ba8;
+  color: #eff1f5;
+  background-color: #d20f39;
 }
 
 .floating-notifications.background
   .notification-row
   .notification-background
   .close-button:hover {
-  background-color: #eba0ac;
-  color: #1e1e2e;
+  background-color: #e64553;
+  color: #eff1f5;
 }
 
 .floating-notifications.background
   .notification-row
   .notification-background
   .close-button:active {
-  background-color: #f38ba8;
-  color: #1e1e2e;
+  background-color: #d20f39;
+  color: #eff1f5;
 }
 
 .control-center {
-  border: 2px solid #cba6f7;
+  border: 2px solid #dd7878;
   border-radius: 13px;
   margin: 20px;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #eff1f5;
+  color: #4c4f69;
   padding: 14px;
 }
 
 .control-center .widget-title > label {
-  color: #cdd6f4;
+  color: #4c4f69;
   font-size: 1.3em;
 }
 
 .control-center .widget-title button {
-  color: #cdd6f4;
-  background-color: #313244;
-  border: 2px solid #585b70;
+  color: #4c4f69;
+  background-color: #ccd0da;
+  border: 2px solid #acb0be;
   border-radius: 8px;
   padding: 6px;
 }
 
 .control-center .widget-title button:hover {
-  border: 2px solid #585b70;
-  background-color: #11111b;
-  color: #cdd6f4;
+  border: 2px solid #acb0be;
+  background-color: #dce0e8;
+  color: #4c4f69;
 }
 
 .control-center .widget-title button:active {
-  border: 2px solid #585b70;
-  background-color: #cba6f7;
-  color: #1e1e2e;
+  border: 2px solid #acb0be;
+  background-color: #dd7878;
+  color: #eff1f5;
 }
 
 .control-center .notification-row .notification-background {
   border-radius: 13px;
-  color: #cdd6f4;
-  background-color: #1e1e2e;
-  border: 2px solid #585b70;
+  color: #4c4f69;
+  background-color: #eff1f5;
+  border: 2px solid #acb0be;
   margin-top: 14px;
 }
 
@@ -213,7 +213,7 @@ slider {
   .notification-row
   .notification-background
   .notification.critical {
-  box-shadow: inset 0 0 7px 0 #f38ba8;
+  box-shadow: inset 0 0 7px 0 #d20f39;
 }
 
 .control-center
@@ -230,7 +230,7 @@ slider {
   .notification
   .notification-content
   .summary {
-  color: #cdd6f4;
+  color: #4c4f69;
 }
 
 .control-center
@@ -239,7 +239,7 @@ slider {
   .notification
   .notification-content
   .time {
-  color: #a6adc8;
+  color: #6c6f85;
 }
 
 .control-center
@@ -248,7 +248,7 @@ slider {
   .notification
   .notification-content
   .body {
-  color: #cdd6f4;
+  color: #4c4f69;
 }
 
 .control-center
@@ -268,10 +268,10 @@ slider {
   > *
   .notification-action {
   border-radius: 15px;
-  color: #cdd6f4;
+  color: #4c4f69;
   padding: 5px;
-  background-color: #11111b;
-  border: 2px solid #585b70;
+  background-color: #dce0e8;
+  border: 2px solid #acb0be;
   margin: 7px;
 }
 
@@ -282,9 +282,9 @@ slider {
   > *:last-child
   > *
   .notification-action:hover {
-  border: 2px solid #585b70;
-  background-color: #313244;
-  color: #cdd6f4;
+  border: 2px solid #acb0be;
+  background-color: #ccd0da;
+  color: #4c4f69;
 }
 
 .control-center
@@ -294,17 +294,17 @@ slider {
   > *:last-child
   > *
   .notification-action:active {
-  border: 2px solid #585b70;
-  background-color: #cba6f7;
-  color: #1e1e2e;
+  border: 2px solid #acb0be;
+  background-color: #dd7878;
+  color: #eff1f5;
 }
 
 .control-center .notification-row .notification-background .close-button {
   margin: 7px;
   padding: 2px;
   border-radius: 13px;
-  color: #1e1e2e;
-  background-color: #eba0ac;
+  color: #eff1f5;
+  background-color: #e64553;
 }
 
 .close-button {
@@ -312,54 +312,54 @@ slider {
 }
 
 .control-center .notification-row .notification-background .close-button:hover {
-  background-color: #f38ba8;
-  color: #1e1e2e;
+  background-color: #d20f39;
+  color: #eff1f5;
 }
 
 .control-center
   .notification-row
   .notification-background
   .close-button:active {
-  background-color: #f38ba8;
-  color: #1e1e2e;
+  background-color: #d20f39;
+  color: #eff1f5;
 }
 
 .control-center .notification-row .notification-background:hover {
-  border: 2px solid #585b70;
+  border: 2px solid #acb0be;
   background-color: #7f849c;
-  color: #cdd6f4;
+  color: #4c4f69;
 }
 
 .control-center .notification-row .notification-background:active {
-  border: 2px solid #585b70;
-  background-color: #cba6f7;
-  color: #1e1e2e;
+  border: 2px solid #acb0be;
+  background-color: #dd7878;
+  color: #eff1f5;
 }
 
 .notification.critical progress {
-  background-color: #f38ba8;
+  background-color: #d20f39;
 }
 
 .notification.low progress,
 .notification.normal progress {
-  background-color: #cba6f7;
+  background-color: #dd7878;
   border-radius: 5px;
 }
 
 .control-center-dnd {
   margin-top: 5px;
   border-radius: 10px;
-  background: #313244;
-  border: 2px solid #585b70;
+  background: #ccd0da;
+  border: 2px solid #acb0be;
   box-shadow: none;
 }
 
 .control-center-dnd:checked {
-  background: #313244;
+  background: #ccd0da;
 }
 
 .control-center-dnd slider {
-  background: #585b70;
+  background: #acb0be;
   border-radius: 8px;
 }
 
@@ -371,19 +371,19 @@ slider {
 .widget-dnd > switch {
   font-size: initial;
   border-radius: 8px;
-  background: #313244;
-  border: 2px solid #585b70;
+  background: #ccd0da;
+  border: 2px solid #acb0be;
   box-shadow: none;
 }
 
 .widget-dnd > switch:checked {
   transition: all 0.1s ease-in-out;
-  background: linear-gradient(120deg, #89b4fa, #cba6f7);
-  color: #313244;
+  background: linear-gradient(120deg, #dd7878, #dd7878);
+  color: #ccd0da;
 }
 
 .widget-dnd > switch slider {
-  background: #585b70;
+  background: #acb0be;
   border-radius: 5px;
   margin: 2px;
 }
@@ -394,17 +394,17 @@ slider {
 }
 
 .widget-menubar > box > .menu-button-bar > :last-child {
-  color: #f38ba8;
+  color: #d20f39;
 }
 
 .power-buttons button:hover,
 .powermode-buttons button:hover,
 .screenshot-buttons button:hover {
-  background: #313244;
+  background: #ccd0da;
 }
 
 .control-center .widget-label > label {
-  color: #cdd6f4;
+  color: #4c4f69;
   font-size: 2rem;
 }
 
@@ -417,7 +417,7 @@ slider {
 }
 
 .widget-backlight trough highlight {
-  background: #f9e2af;
+  background: #df8e1d;
 }
 
 .widget-backlight scale {
@@ -426,7 +426,7 @@ slider {
 
 .widget-backlight label {
   font-size: 1.5rem;
-  color: #f9e2af;
+  color: #df8e1d;
 }
 
 .widget-backlight .KB {
@@ -434,9 +434,9 @@ slider {
 }
 
 .widget-mpris {
-  color: #cdd6f4;
-  background-color: #313244;
-  border: 2px solid #313244;
+  color: #eff1f5;
+  background-color: #ccd0da;
+  border: 2px solid #ccd0da;
   border-radius: 13px;
   padding: 5px 10px;
   margin-bottom: 12px;
@@ -462,28 +462,28 @@ slider {
 }
 
 .widget-volume {
-  color: #cdd6f4;
-  background-color: #313244;
-  border: 2px solid #313244;
+  color: #4c4f69;
+  background-color: #ccd0da;
+  border: 2px solid #ccd0da;
   border-radius: 13px;
   padding: 10px 10px;
   margin-top: 5px;
 }
 
 .widget-volume label {
-  color: #cdd6f4;
+  color: #4c4f69;
   font-size: 15px;
 }
 
 .widget-volume trough highlight {
-  background: #cba6f7;
+  background: #dd7878;
   border-radius: 13px;
 }
 
 .per-app-volume {
-  color: #cdd6f4;
-  background-color: #1e1e2e;
-  border: 2px solid #585b70;
+  color: #4c4f69;
+  background-color: #eff1f5;
+  border: 2px solid #acb0be;
   border-radius: 13px;
   padding: 10px 10px;
   margin-top: 5px;

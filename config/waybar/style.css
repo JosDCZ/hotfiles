@@ -11,7 +11,7 @@
 }
 
 window#waybar {
-  background-color: rgba(17, 17, 27, 0);
+  background-color: rgba(220, 224, 232, 0);
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -21,10 +21,10 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-  color: #cdd6f4;
+  color: #4c4f69;
   padding: 1px;
   border-radius: 15px;
-  background-color: #11111b;
+  background-color: #dce0e8;
 }
 
 #workspaces button {
@@ -32,27 +32,27 @@ window#waybar {
   margin: 3px 4px;
   border-radius: 15px;
   border: 0px;
-  color: #cdd6f4;
-  background-color: #313244;
+  color: #4c4f69;
+  background-color: #ccd0da;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-  color: #1e1e2e;
-  background-color: #cba6f7;
+  color: #eff1f5;
+  background-color: #dd7878;
   border-radius: 15px;
   min-width: 50px;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.urgent {
-  color: #1e1e2e;
-  background-color: #89b4fa;
+  color: #eff1f5;
+  background-color: #8839ef;
 }
 
 #workspaces button:hover {
-  color: #1e1e2e;
-  background: #b4befe;
+  color: #eff1f5;
+  background: #dc8a78;
   border-radius: 15px;
 }
 
@@ -62,8 +62,8 @@ window#waybar {
 
 tooltip {
   border-radius: 8px;
-  background-color: #1e1e2e;
-  border: 2px solid #585b70;
+  background-color: #eff1f5;
+  border: 2px solid #acb0be;
 }
 
 tooltip * {
@@ -71,7 +71,7 @@ tooltip * {
 }
 
 tooltip label {
-  color: #cdd6f4;
+  color: #4c4f69;
   padding: 5px;
 }
 
@@ -81,16 +81,16 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #window {
-  background: #1e1e2e;
+  background: #eff1f5;
   padding: 0px 10px 0px 10px;
   margin: 0px 0px 0px 0px;
   border-radius: 15px;
-  color: #cdd6f4;
-  border: 2px solid #585b70;
+  color: #4c4f69;
+  border: 2px solid #acb0be;
 }
 
 window#waybar.empty #window {
-  background: #1e1e2e;
+  background: #eff1f5;
 }
 
 /* -----------------------------------------------------
@@ -98,12 +98,12 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #taskbar {
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #eff1f5;
+  color: #4c4f69;
   padding: 2px 5px 2px 5px;
   margin: 0px 10px 0px 0px;
   border-radius: 15px;
-  border: 2px solid #cba6f7;
+  border: 2px solid #dd7878;
 }
 
 #taskbar button {
@@ -152,20 +152,20 @@ window#waybar.empty #window {
 #custom-system {
   padding: 0px;
   font-size: 18px;
-  color: #cdd6f4;
+  color: #4c4f69;
   font-weight: bold;
 }
 
 #custom-browser {
   padding: 0px;
   font-size: 20px;
-  color: #cdd6f4;
+  color: #4c4f69;
   font-weight: bold;
 }
 
 #keyboard-state {
   padding: 0px;
-  color: #cdd6f4;
+  color: #4c4f69;
   font-weight: bold;
 }
 
@@ -187,7 +187,7 @@ window#waybar.empty #window {
 
 #idle_inhibitor.activated {
   margin-right: 15px;
-  color: #f38ba8;
+  color: #d20f39;
 }
 
 /* -----------------------------------------------------
@@ -198,9 +198,9 @@ window#waybar.empty #window {
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 10px;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
-  border: 2px solid #cba6f7;
+  background-color: #eff1f5;
+  color: #4c4f69;
+  border: 2px solid #dd7878;
 }
 
 /* -----------------------------------------------------
@@ -216,20 +216,12 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-  background: linear-gradient(120deg, #cba6f7, #94e2d5);
-  color: #1e1e2e;
+  background: linear-gradient(120deg, #ea76cb, #dc8a78);
+  color: #eff1f5;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  border: 2px solid #1e1e2e;
-}
-
-#custom-updates.yellow {
-  background: linear-gradient(120deg, #cba6f7, #f9e2af);
-}
-
-#custom-updates.red {
-  background: linear-gradient(120deg, #cba6f7, #eba0ac);
+  border: 2px solid #eff1f5;
 }
 
 /* -----------------------------------------------------
@@ -247,12 +239,12 @@ window#waybar.empty #window {
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  background: #1e1e2e;
+  background: #eff1f5;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
   border-radius: 15px;
-  color: #cdd6f4;
-  border: 2px solid #585b70;
+  color: #4c4f69;
+  border: 2px solid #acb0be;
 }
 
 /* -----------------------------------------------------
@@ -264,7 +256,7 @@ window#waybar.empty #window {
 #cpu {
   margin-right: 10px;
   padding: 0px;
-  color: #cdd6f4;
+  color: #4c4f69;
 }
 
 /* -----------------------------------------------------
@@ -275,9 +267,9 @@ window#waybar.empty #window {
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  background: linear-gradient(120deg, #89b4fa, #cba6f7);
-  color: #1e1e2e;
-  border: 2px solid #1e1e2e;
+  background: linear-gradient(120deg, #dd7878, #7287fd);
+  color: #eff1f5;
+  border: 2px solid #eff1f5;
 }
 
 /* -----------------------------------------------------
@@ -288,9 +280,9 @@ window#waybar.empty #window {
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  background: linear-gradient(120deg, #89dceb, #f9e2af);
-  color: #1e1e2e;
-  border: 2px solid #1e1e2e;
+  background: linear-gradient(120deg, #04a5e5, #df8e1d);
+  color: #eff1f5;
+  border: 2px solid #eff1f5;
 }
 
 /* -----------------------------------------------------
@@ -298,12 +290,12 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #eff1f5;
+  color: #4c4f69;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  border: 2px solid #cba6f7;
+  border: 2px solid #dd7878;
 }
 
 /* -----------------------------------------------------
@@ -311,16 +303,16 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  background: linear-gradient(120deg, #f9e2af, #cba6f7);
-  color: #1e1e2e;
+  background: linear-gradient(120deg, #df8e1d, #8839ef);
+  color: #eff1f5;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  border: 2px solid #1e1e2e;
+  border: 2px solid #eff1f5;
 }
 
 #pulseaudio.muted {
-  background: linear-gradient(120deg, #89b4fa, #f38ba8);
+  background: linear-gradient(120deg, #1e66f5, #d20f39);
 }
 
 /* -----------------------------------------------------
@@ -328,22 +320,22 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #eff1f5;
+  color: #4c4f69;
   border-radius: 15px;
   margin: 0px 10px 0px 0px;
   padding: 0px 10px 0px 10px;
-  border: 2px solid #cba6f7;
+  border: 2px solid #8839ef;
 }
 
 #network.ethernet {
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #eff1f5;
+  color: #4c4f69;
 }
 
 #network.wifi {
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #eff1f5;
+  color: #4c4f69;
 }
 
 /* -----------------------------------------------------
@@ -353,16 +345,16 @@ window#waybar.empty #window {
 #bluetooth,
 #bluetooth.on,
 #bluetooth.connected {
-  background: linear-gradient(120deg, #89b4fa, #a6e3a1);
-  color: #1e1e2e;
+  background: linear-gradient(120deg, #1e66f5, #40a02b);
+  color: #eff1f5;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  border: 2px solid #1e1e2e;
+  border: 2px solid #eff1f5;
 }
 
 #bluetooth.off {
-  background: linear-gradient(120deg, #eba0ac, #89b4fa);
+  background: linear-gradient(120deg, #e64553, #1e66f5);
 }
 
 /* -----------------------------------------------------
@@ -370,28 +362,28 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #battery {
-  background: linear-gradient(120deg, #f5c2e7, #85c1dc);
-  color: #1e1e2e;
+  background: linear-gradient(120deg, #ea76cb, #209fb5);
+  color: #eff1f5;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   margin: 0px 10px 0px 0px;
-  border: 2px solid #1e1e2e;
+  border: 2px solid #eff1f5;
 }
 
 #battery.charging,
 #battery.plugged {
-  background: linear-gradient(120deg, #89b4fa, #a6e3a1);
+  background: linear-gradient(120deg, #1e66f5, #40a02b);
 }
 
 @keyframes blink {
   to {
-    background-color: #f38ba8;
-    color: #f38ba8;
+    background-color: #d20f39;
+    color: #d20f39;
   }
 }
 
 #battery.critical:not(.charging) {
-  background: linear-gradient(120deg, #f5c2e7, #b4befe);
+  background: linear-gradient(120deg, #ea76cb, #7287fd);
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -404,12 +396,12 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #tray {
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #eff1f5;
+  color: #4c4f69;
   padding: 2px 7px 2px 7px;
   margin: 0px 10px 0px 0px;
   border-radius: 15px;
-  border: 2px solid #cba6f7;
+  border: 2px solid #dd7878;
 }
 
 #tray menu * {

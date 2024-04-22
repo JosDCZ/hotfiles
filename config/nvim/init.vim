@@ -33,7 +33,7 @@ set termguicolors
 
 syntax on
 
-colorscheme catppuccin-mocha
+colorscheme catppuccin-latte
 
 " Unicode symbols for the Status Line
 let g:airline_left_alt_sep = "\ue0b5"

@@ -59,17 +59,17 @@ prompt {
     enabled:                     true;
     padding:                     10px;
     border-radius:               50%;
-    background-image: linear-gradient(135deg, #a6e3a1FF, #94e2d5FF);
+    background-color:            @active;
     text-color:                  @background;
 }
 
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
+    str:                         "";
     padding:                     10px 19px 10px 15px;
     border-radius:               50%;
-    background-image: linear-gradient(135deg, #eba0acFF, #f9e2afFF);
+    background-color:            @urgent;
     text-color:                  @background;
 }
 entry {
@@ -122,7 +122,7 @@ element normal.normal {
     text-color:                  @foreground;
 }
 element selected.normal {
-    background-image: linear-gradient(135deg, #cba6f7FF, #89b4faFF);
+    background-color:            @selected;
     text-color:                  @background;
 }
 element-icon {

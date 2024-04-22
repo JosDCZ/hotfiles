@@ -132,7 +132,7 @@ element normal.normal {
     text-color:                  @foreground;
 }
 element selected.normal {
-    background-image: linear-gradient(120deg, #cba6f7FF, #89b4faFF);
+    background-color:            @selected;
     text-color:                  @background;
 }
 element-icon {
