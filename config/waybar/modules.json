@@ -81,7 +81,7 @@
   },
   "custom/appmenu": {
     "format": "Apps",
-    "on-click": "sh ~/.config/rofi/launchers/type-2/launcher.sh",
+    "on-click": "sh ~/.config/rofi/launchers/type/launcher.sh",
     "tooltip": false
   },
   "custom/exit": {
