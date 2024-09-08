@@ -1,0 +1,19 @@
+[Default Applications]
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+text/plain=geany.desktop
+image/jpeg=viewnior.desktop
+image/svg+xml=viewnior.desktop
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+image/png=viewnior.desktop
+
+[Added Associations]
+text/plain=geany.desktop;
+image/jpeg=viewnior.desktop;
+image/svg+xml=viewnior.desktop;
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop;
+image/png=viewnior.desktop;
